@@ -1,0 +1,14 @@
+
+.nameInput__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameInput__input--style {
+    height: 2rem;
+    border: 2px solid lightgray;
+}
+
+.nameInput__input--style:focus {
+    outline: 1px solid rgb(2, 204, 255);
+}

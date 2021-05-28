@@ -13,7 +13,7 @@
 .paymentEdit__input__Container {
     display: flex;
     width: 80%;
-    height: 2rem;
+    
 }
 
 .paymentEdit_input__addon {
@@ -25,6 +25,10 @@
 }
 
 .paymentEdit_input--style {
-    border: 1px solid lightseagreen;
+    border: 1px solid lightgray;
     flex: 1;
+}
+
+.paymentEdit_input--style:focus {
+    outline: 2px solid rgb(2, 204, 255);
 }
