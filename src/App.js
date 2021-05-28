@@ -1,39 +1,52 @@
-import './App.css';
-import React, {useState} from 'react';
+import "./App.css";
+import React, { useState } from "react";
 
-import Title from './components/title/Title';
-import CCImage from './components/ccImage/CCImage';
-import PaymentEdit from './components/paymentEdit/PaymentEdit';
-import NameInput from './components/nameInput/NameInput';
+import Title from "./components/title/Title";
+import CCImage from "./components/ccImage/CCImage";
+import PaymentEdit from "./components/paymentEdit/PaymentEdit";
+import NameInput from "./components/nameInput/NameInput";
+import NumberInput from "./components/numberInput/NumberInput";
 
 function App() {
   const [paymentAmount, setPaymentAmount] = useState(0);
   const [userName, setUserName] = useState("");
+  const [userNumber, setUserNumber] = useState("");
 
-  const updatePaymentAmount = (amount)=> {
+  const updatePaymentAmount = (amount) => {
     setPaymentAmount(amount);
-  }
+  };
 
   const getUserName = (name) => {
     setUserName(name);
-  }
+  };
+
+  const getUserNumber = (number) => {
+    setUserNumber(number);
+  };
 
   return (
-    <div className="container">      
-      <section className="title"> 
+    <div className="container">
+      <section className="title">
         <Title />
-      </section> 
+      </section>
       <main className="App">
-        <section className="ccImage ">
+        <section className="ccImage">
           <CCImage />
-        </section> 
+        </section>
         <section className="paymentEdit">
-          <PaymentEdit amount = {paymentAmount} getPaymentAmount={updatePaymentAmount} />
+          <PaymentEdit
+            amount={paymentAmount}
+            getPaymentAmount={updatePaymentAmount}
+          />
         </section>
         <section className="ccNameInput">
           <NameInput getName={getUserName} />
+          {userName}
         </section>
-        <section className="ccNumberInput "></section>
+        <section className="ccNumberInput ">
+          <NumberInput getNumber={getUserNumber} />
+          {userNumber}
+        </section>
         <section className="expCVV "></section>
         <section className="zipCode "></section>
         <section className="payButton  bottom-padding"></section>

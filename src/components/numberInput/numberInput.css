@@ -1,0 +1,15 @@
+
+
+.numberInput__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.numberInput__input--style {
+    height: 2rem;
+    border: 2px solid lightgray;
+}
+
+.numberInput__input--style:focus {
+    outline: 1px solid rgb(2, 204, 255);
+}

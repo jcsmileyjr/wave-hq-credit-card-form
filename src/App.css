@@ -19,7 +19,7 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: .3fr .3fr .3fr .3fr .3fr .3fr;
+  grid-template-rows: 12vh 12vh 12vh 12vh 12vh 12vh 12vh;
   grid-template-areas:
     "ccImage"
     "paymentEdit"
@@ -57,7 +57,6 @@
 
 .ccNumberInput {
   grid-area: ccNumberInput;
-  background-color: orange;
 }
 
 .expCVV {
