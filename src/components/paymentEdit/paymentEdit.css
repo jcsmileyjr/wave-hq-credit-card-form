@@ -1,0 +1,11 @@
+
+
+.paymentEdit__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.paymentEdit__dollarAmount--style {
+    font-size: 2rem;
+}
