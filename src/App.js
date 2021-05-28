@@ -8,6 +8,10 @@ import PaymentEdit from './components/paymentEdit/PaymentEdit';
 function App() {
   const [paymentAmount, setPaymentAmount] = useState(0);
 
+  const updatePaymentAmount = (amount)=> {
+    setPaymentAmount(amount);
+  }
+
   return (
     <div className="container">      
       <section className="title"> 
@@ -18,7 +22,7 @@ function App() {
           <CCImage />
         </section> 
         <section className="paymentEdit">
-          <PaymentEdit amount = {paymentAmount} />
+          <PaymentEdit amount = {paymentAmount} getPaymentAmount={updatePaymentAmount} />
         </section>
         <section className="ccNameInput side-paddin"></section>
         <section className="ccNumberInput "></section>

@@ -9,3 +9,22 @@
 .paymentEdit__dollarAmount--style {
     font-size: 2rem;
 }
+
+.paymentEdit__input__Container {
+    display: flex;
+    width: 80%;
+    height: 2rem;
+}
+
+.paymentEdit_input__addon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    width: 2rem;
+}
+
+.paymentEdit_input--style {
+    border: 1px solid lightseagreen;
+    flex: 1;
+}
