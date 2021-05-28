@@ -1,38 +1,83 @@
+.container {
+  max-width: 26rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    margin-top: 0px;
+  }
+}
+
+.top-padding, .bottom-padding {
+  margin-top: 1rem;
+}
 .App {
+  border: 1px solid lightgray;
+  height: 100vh;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .5fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "ccImage"
+    "paymentEdit"
+    "ccNameInput"
+    "ccNumberInput"
+    "expCVV"
+    "zipCode"
+    "payButton";
+}
+
+.title {
+  grid-area: title;
+  background-color: rgb(245, 243, 243);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(226, 224, 224);
+  color: rgb(71, 98, 116);
   text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid lightgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ccImage {
+  grid-area: ccImage;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.paymentEdit {
+  grid-area: paymentEdit;
+  background-color: green;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ccNameInput {
+  grid-area: ccNameInput;
+  background-color: yellow;
 }
 
-.App-link {
-  color: #61dafb;
+.ccNumberInput {
+  grid-area: ccNumberInput;
+  background-color: orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expCVV {
+  grid-area: expCVV;
+  background-color: blueviolet;
+}
+
+.zipCode {
+  grid-area: zipCode;
+  background-color: aqua;
+}
+
+.payButton {
+  grid-area: payButton;
+  background-color: crimson;
+}
+
+.payButton, .zipCode, .expCVV, .ccNumberInput, .ccNameInput, .paymentEdit, .ccImageSTOP {
+  width: 80%;
+  margin: 0 auto;
 }
