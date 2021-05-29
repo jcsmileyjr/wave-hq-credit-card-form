@@ -65,7 +65,6 @@
 
 .zipCode {
   grid-area: zipCode;
-  background-color: aqua;
 }
 
 .payButton {

@@ -7,6 +7,7 @@ import PaymentEdit from "./components/paymentEdit/PaymentEdit";
 import NameInput from "./components/nameInput/NameInput";
 import NumberInput from "./components/numberInput/NumberInput";
 import ExpCVV from './components/expCVV/expCVV';
+import ZipCode from './components/zipCode/ZipCode';
 
 function App() {
   const [paymentAmount, setPaymentAmount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
   const [userNumber, setUserNumber] = useState("");
   const [userCCExpireDate, setUserCCExpireDate] = useState("");
   const [userCCCVV, setUserCCCVV] = useState("");
+  const [userZipCode, setUserZipCode] = useState("");
 
   const updatePaymentAmount = (amount) => {
     setPaymentAmount(amount);
@@ -51,7 +53,9 @@ function App() {
         <section className="expCVV ">
           <ExpCVV expDate={userCCExpireDate} cvv={userCCCVV} getCVV={setUserCCCVV} getExpireDate={setUserCCExpireDate} />
         </section>
-        <section className="zipCode "></section>
+        <section className="zipCode ">
+          <ZipCode zipCode={userZipCode} getZipCode={setUserZipCode} />
+        </section>
         <section className="payButton  bottom-padding"></section>
       </main>
     </div>
