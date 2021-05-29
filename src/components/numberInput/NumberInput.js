@@ -14,7 +14,6 @@ const NumberInput = (props) => {
                     type="text"
                     pattern="[0-9]+"
                     className="numberInput__input--style"
-                    disableUnderline
                   />
                 )}
               </InputMask>

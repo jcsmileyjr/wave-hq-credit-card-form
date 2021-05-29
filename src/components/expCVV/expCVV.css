@@ -1,0 +1,16 @@
+
+.label__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.expireInput--style, .cvvInput--style {
+    height: 2rem;
+    border: 2px solid lightgray;
+    width: 95%;
+}
+
+.expireInput--style:focus, .cvvInput--style:focus{
+    outline: 1px solid rgb(2, 204, 255);
+}
