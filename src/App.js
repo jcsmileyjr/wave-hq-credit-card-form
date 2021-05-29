@@ -41,11 +41,9 @@ function App() {
         </section>
         <section className="ccNameInput">
           <NameInput getName={getUserName} />
-          {userName}
         </section>
         <section className="ccNumberInput ">
-          <NumberInput getNumber={getUserNumber} />
-          {userNumber}
+          <NumberInput ccNumber={userNumber} getNumber={getUserNumber} />
         </section>
         <section className="expCVV "></section>
         <section className="zipCode "></section>
